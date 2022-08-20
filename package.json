@@ -1,0 +1,23 @@
+{
+  "name": "secretform",
+  "version": "0.0.2",
+  "description": "Manage secrets in CI with easy configuration and customizations",
+  "main": "index.js",
+  "bin": {
+    "secretform": "cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Nir Adler",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.154.0",
+    "@aws-sdk/credential-providers": "^3.154.0",
+    "dotenv": "^16.0.1",
+    "handlebars": "^4.7.7",
+    "js-yaml": "^4.1.0",
+    "yargs": "^17.5.1"
+  }
+}
