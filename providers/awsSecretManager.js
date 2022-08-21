@@ -29,7 +29,6 @@ class AwsSecretManagerProvider extends BaseProvider {
     }
 
     async getSecret(key) {
-        console.log(key)
         const command = new GetSecretValueCommand({
             SecretId: key,
         });

@@ -16,7 +16,7 @@ const argv = yargs(hideBin(process.argv))
     .option('output', {
         alias: 'o',
         type: 'string',
-        description: 'output type, json, yaml, env',
+        description: 'output type, json, yaml, dotenv',
         default: 'json'
     })
     .option('outputPath', {

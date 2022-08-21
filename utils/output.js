@@ -15,7 +15,7 @@ class Output {
             case "yaml":
             case "yml":
                 return yaml.dump(this.value)
-            case "env":
+            case "dotenv":
                 return Object.keys(this.value).map(key => `${key}=${this.value[key]}`).join("\n")
             default:
                 return this.value
