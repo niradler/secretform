@@ -39,7 +39,9 @@ const argv = yargs(hideBin(process.argv))
     })
     .argv
 
-const main = async (argv) => {
+const isCli = argv['$0'].endsWith('cli.js')
+
+const cli = async (argv) => {
     try {
         const configPath = path.join(process.cwd(), argv.configPath)
         const c = new Config(configPath)
@@ -77,9 +79,19 @@ const main = async (argv) => {
         if (!args.disableOutput) {
             output.write();
         }
-        console.log(output.toString())
+
+        if (isCli)
+            console.log(output.toString());
+
+        return output.value
     } catch (error) {
         console.log(error)
     }
 }
-main(argv);
+
+if (isCli) {
+    console.log("**************clie**************", argv)
+    cli(argv)
+}
+
+module.exports = cli

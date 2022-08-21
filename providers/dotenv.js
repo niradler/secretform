@@ -1,5 +1,6 @@
 
 const dotenv = require('dotenv')
+const BaseProvider = require('./base')
 
 class DotenvProvider extends BaseProvider {
     constructor() { }
