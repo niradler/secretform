@@ -90,7 +90,6 @@ const cli = async (argv) => {
 }
 
 if (isCli) {
-    console.log("**************clie**************", argv)
     cli(argv)
 }
 

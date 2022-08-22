@@ -1,9 +1,12 @@
 
+const fs = require('fs')
 const dotenv = require('dotenv')
 const BaseProvider = require('./base')
 
 class DotenvProvider extends BaseProvider {
-    constructor() { }
+    constructor(config) {
+        super(config)
+    }
 
     getSecret(key) {
 
