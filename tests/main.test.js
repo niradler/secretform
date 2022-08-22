@@ -38,6 +38,6 @@ test('test secretformenv.yml', async () => {
     })
 
     expect(secrets).toEqual({
-        "my_local_secret": "secret value",
+        "my_local_secret": "secret env",
     });
 });
