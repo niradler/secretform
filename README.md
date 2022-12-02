@@ -1,5 +1,7 @@
 # Secretform
 
+Create secrets file from external secerts services such as AWS secret manager.
+
 ## Installation
 
 ```sh
